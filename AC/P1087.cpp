@@ -4,15 +4,14 @@ using namespace std;
 
 inline char FBI(string str)
 {
-    int one=0,zero=0;
-    for(auto c : str)
+    auto one = str.find('1');
+    auto zero = str.find('0');
+    if(one != string::npos)
     {
-        if(c == '1') one++;
-        else zero++;
+        if(zero != string::npos) return 'F';
+        else return 'I';
     }
-    if(!one && zero) return 'B';
-    else if(one && !zero) return 'I';
-    else return 'F';
+    else return 'B';
 }
 
 void print(string str)
