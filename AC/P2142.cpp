@@ -39,7 +39,7 @@ string sub(string a,string b)
     }
     while(ans.length()>1&&ans[0]=='0')
         ans.erase(0,1);
-    if(flag=1)
+    if(flag)
         ans='-'+ans;
     return ans;
 }
