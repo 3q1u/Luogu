@@ -58,3 +58,6 @@ add_executable(Luogu
         WIP/P2639.cpp
         WIP/P7869.cpp
         WIP/P7870.cpp)
+
+add_executable(P1130 WIP/P1130.cpp)
+add_executable(P2362 WIP/P2362.cpp)
