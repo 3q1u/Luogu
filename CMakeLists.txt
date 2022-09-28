@@ -61,3 +61,5 @@ add_executable(Luogu
 
 add_executable(P1130 WIP/P1130.cpp)
 add_executable(P2362 WIP/P2362.cpp)
+add_executable(P1164 AC/P1164.cpp)
+add_executable(P1244 AC/P1244.cpp)

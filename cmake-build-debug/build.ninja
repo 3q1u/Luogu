@@ -457,6 +457,72 @@ build P2362.exe: CXX_EXECUTABLE_LINKER__P2362_Debug CMakeFiles/P2362.dir/WIP/P23
   TARGET_IMPLIB = libP2362.dll.a
   TARGET_PDB = P2362.exe.dbg
 
+# =============================================================================
+# Object build statements for EXECUTABLE target P1164
+
+
+#############################################
+# Order-only phony target for P1164
+
+build cmake_object_order_depends_target_P1164: phony || CMakeFiles/P1164.dir
+
+build CMakeFiles/P1164.dir/AC/P1164.cpp.obj: CXX_COMPILER__P1164_Debug F$:/Luogu/AC/P1164.cpp || cmake_object_order_depends_target_P1164
+  DEP_FILE = CMakeFiles\P1164.dir\AC\P1164.cpp.obj.d
+  FLAGS = -g
+  OBJECT_DIR = CMakeFiles\P1164.dir
+  OBJECT_FILE_DIR = CMakeFiles\P1164.dir\AC
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target P1164
+
+
+#############################################
+# Link the executable P1164.exe
+
+build P1164.exe: CXX_EXECUTABLE_LINKER__P1164_Debug CMakeFiles/P1164.dir/AC/P1164.cpp.obj
+  FLAGS = -g
+  LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  OBJECT_DIR = CMakeFiles\P1164.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = P1164.exe
+  TARGET_IMPLIB = libP1164.dll.a
+  TARGET_PDB = P1164.exe.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target P1244
+
+
+#############################################
+# Order-only phony target for P1244
+
+build cmake_object_order_depends_target_P1244: phony || CMakeFiles/P1244.dir
+
+build CMakeFiles/P1244.dir/AC/P1244.cpp.obj: CXX_COMPILER__P1244_Debug F$:/Luogu/AC/P1244.cpp || cmake_object_order_depends_target_P1244
+  DEP_FILE = CMakeFiles\P1244.dir\AC\P1244.cpp.obj.d
+  FLAGS = -g
+  OBJECT_DIR = CMakeFiles\P1244.dir
+  OBJECT_FILE_DIR = CMakeFiles\P1244.dir\AC
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target P1244
+
+
+#############################################
+# Link the executable P1244.exe
+
+build P1244.exe: CXX_EXECUTABLE_LINKER__P1244_Debug CMakeFiles/P1244.dir/AC/P1244.cpp.obj
+  FLAGS = -g
+  LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  OBJECT_DIR = CMakeFiles\P1244.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = P1244.exe
+  TARGET_IMPLIB = libP1244.dll.a
+  TARGET_PDB = P1244.exe.dbg
+
 
 #############################################
 # Utility command for edit_cache
@@ -487,6 +553,10 @@ build Luogu: phony Luogu.exe
 
 build P1130: phony P1130.exe
 
+build P1164: phony P1164.exe
+
+build P1244: phony P1244.exe
+
 build P2362: phony P2362.exe
 
 # =============================================================================
@@ -497,7 +567,7 @@ build P2362: phony P2362.exe
 #############################################
 # Folder: F:/Luogu/cmake-build-debug
 
-build all: phony Luogu.exe P1130.exe P2362.exe
+build all: phony Luogu.exe P1130.exe P2362.exe P1164.exe P1244.exe
 
 # =============================================================================
 # Built-in targets
