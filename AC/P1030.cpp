@@ -2,7 +2,7 @@
 #include <string>
 using namespace std;
 
-void findRoot(string a,string b)
+void findRoot(const string& a,string b)
 {
     if(a.size())
     {
