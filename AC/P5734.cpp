@@ -13,7 +13,7 @@ int main()
         if(aa == 1)
         {
             cin>>temp;
-            a=a+temp;
+            a += temp;
             cout<<a<<endl;
         }
         else if(aa == 2)
