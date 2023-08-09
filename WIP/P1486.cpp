@@ -1,51 +1,54 @@
 #include <bits/stdc++.h>
 #include <ext/pb_ds/assoc_container.hpp>
 #include <ext/pb_ds/tree_policy.hpp>
-#define mk std::make_pair
+#include <sys/types.h>
 
-using node = std::pair<int,int>;
 using namespace __gnu_pbds;
-tree<int, null_type, std::greater<int>, rb_tree_tag, tree_order_statistics_node_update> tr, x;
+using std::cin;
+using std::greater;
+struct node
+{
+    int sal, id;
+    node(int s, int i) : sal(s), id(i) {}
+    bool operator >(node j) const
+    {
+        return sal == j.sal ? id > j.id : sal > j.sal;
+    }
+};
 
-int n, min, gap = 0, ans = 0;
+tree<node, null_type, greater<node>, rb_tree_tag, tree_order_statistics_node_update> Tr, tmp;
 
 int main()
 {
-    scanf("%d %d", &n, &min);
+    int n, m, ans = 0;
+    cin >> n >> m;
+    int s = 0, k;
+    char x;
     while(n--)
     {
-        char op; int k;
-        scanf("%c %d", &op, &k);
-        switch(op)
+        cin >> x;
+        cin >> k;
+        if(x == 'I')
         {
-            case 'I':
-            {
-                if((k += gap) >= min)
-                    tr.insert(k);
-            }
-            case 'A':
-            {
-                gap -= k;
-                min -= k;
-                break;
-            }
-            case 'S':
-            {
-                gap += k;
-                min += k;
-                tr.split(min, x);
-                ans += x.size();
-                break;
-            }
-            case 'F':
-            {
-                printf(k > tr.size() ? "-1\n" : "%d\n", *tr.find_by_order(k-1) - gap);
-                break;
-            }
-            default:
-                break;
+            k += s;
+            if(k >= m)
+                Tr.insert(node(k, n));
         }
-        // printf("%d\n", static_cast<int>(tr.size()));
+        else if(x == 'A')
+        {
+            s -= k;
+            m -= k;
+        }
+        else if(x == 'S')
+        {
+            s += k;
+            m += k;
+            Tr.split(node(m, -1), tmp);
+            ans += tmp.size();
+        }
+        else if(x == 'F')
+            printf(k > Tr.size() ? "-1\n" : "%d\n",Tr.find_by_order(k-1)->sal - s);
     }
-    printf("%d", ans);
+    printf("%d\n", ans);
+    return 0;
 }
